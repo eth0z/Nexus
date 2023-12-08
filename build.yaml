@@ -1,0 +1,32 @@
+name: Build Executable
+
+on:
+  push:
+    branches:
+      - main  # Adjust to your branch name
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # Choose your desired OS
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'  # Specify your Python version
+
+      - name: Install dependencies
+        run: pip install pyinstaller
+
+      - name: Build executable
+        run: |
+          pyinstaller --onefile nexus.py
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: my-executable  # Change the artifact name if needed
+          path: dist/nexus  # Update to match your output file name/location
