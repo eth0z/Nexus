@@ -1,7 +1,11 @@
 # Nexus
 
-hey
+Basic ransomware-type script written in python.
 
-## WARNING
+Walks through all files and encrypts, waits 30 seconds, then decrypts.
 
-This is malware. I am not responsible for any damage caused to your system. You have been warned, and you will be warned again if you try to run it.
+# WARNING
+
+No harm is intended by this.
+
+Do not run it on a genuine machine as you could lose data.
